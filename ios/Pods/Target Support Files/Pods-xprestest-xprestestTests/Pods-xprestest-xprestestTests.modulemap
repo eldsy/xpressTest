@@ -1,0 +1,6 @@
+module Pods_xprestest_xprestestTests {
+  umbrella header "Pods-xprestest-xprestestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
