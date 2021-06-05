@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Button, } from 'react-native';
 import ModalErrorView from './modalErrorView';
-import { logUser } from '../reducer/action';
-import { connect } from 'react-redux';
 import Spinner from 'react-native-loading-spinner-overlay';
 import Modal from 'react-native-modal';
-import { CommonActions } from '@react-navigation/native';
 import axios from 'axios';
 
 class Login extends Component {
@@ -136,17 +133,4 @@ const styles = StyleSheet.create({
     }
 });
 
-
-
-const mapStateToProps = state => {
-    console.log("mapStateToProps state: " + JSON.stringify(state));
-    return {
-        reducerResponse: { loading: state.loading, result: { ...state.result }, error:  state.error}
-    };
-};
-
-const mapDispatchToProps = {
-    logUser
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default Login;
